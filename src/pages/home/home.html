@@ -1,15 +1,20 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>
+      Lista de livros
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Bem vindo, professor!</h2>
-  <p>
-    Esse é o entregavel de Ionic
-  </p>
-  <p>
-   :3
-  </p>
+  <ion-list>
+
+      <ion-item *ngFor="let livro of livros"(click)="vai(livro)">
+          <h2>{{livro.nome}}</h2>
+          <p>{{livro.autor}}</p>
+          
+          
+      </ion-item>
+  
+  </ion-list>
 </ion-content>
